@@ -12,20 +12,28 @@
 
 8. git commit -m <message>
 9. git commit -am <message> (# commiting directly from working directory without adding files)
+10. git commit --amend -m <message> (# Changing message of last commit without recommiting.)
+11. git commit --amend (# Adding files to last commit without recommiting.)
 
-10. git diff <filename>
-11. git diff --staged <filename> (# To do diff in staging area of repository)
+12. git diff <filename>
+13. git diff --staged <filename> (# To do diff in staging area of repository)
 
 ## Git Reverting Files ##
 
 1. git checkout -- <filename> (# To discard changes in Working directory)
-2. git reset Head <filename> (# To unstage the file (Staging area -> Working directory))
+2. git checkout <Hash Log> -- <FileName> (# To discard changes in particular file from Last Commit(Local Repository -> Staging area)) 
+3. git restore --staged <filename>
+4. git restore <filename> (# To discard changes in working directory)
 
-3. git checkout <Hash Log> -- <FileName> (# To discard changes in particular file from Last Commit(Local Repository -> Staging area)) 
-4. git restore --staged <filename>
-5. git restore <filename> (# To discard changes in working directory)
+5. git rm <filename> (# removes file from Working Directory)
 
-6. git rm <filename> (# removes file from Working Directory)
+6. git revert <Hash Log> (# To revert given commit, its creates new commit rather than reset.)
+7. git revert HEAD (# To revert last commit, its creates new commit rather than reset.)
+
+8. git reset Head <filename> (# To unstage the file (Staging area -> Working directory))
+9. git reset --soft <commit_hash> (# To discard the commit (Local Repository -> Staging area))
+10. git reset <commit_hash> (# To discard changes of the commit (Local Repository -> Working directory))
+11. git reset --hard <commit_hash> (# To discard changes of the commit for ever (Local Repository -> Initial state.))
 
 ## Git Rename Files ##
 
@@ -81,6 +89,13 @@ git checkout $BRANCH
 
 1. git log
 2. git log --author="<your name>"
+3. git log --oneline
+4. git log --stat
+5. git reflog (# It lists all commits in order of last reference.)
+
+## Git Cherry-pick ##
+
+1. git cherry-pick <commit_hash> (# Pull commit from other branch to current branch.)
 
 
 ## Locally & Globally set and get commands ##
@@ -122,10 +137,17 @@ git config --global --get user.name
 
 ## Git Save Temporary data ##
 
-git stash save
-git checkout branch
+1.1. git stash save
+1.2. git checkout branch
 
 // do something
 
-git checkout oldbranch
-git stash pop
+1.3. git checkout oldbranch
+1.4. git stash pop
+
+2. git stash list (# lists all changes saved in stash.)
+3. git stash show (# shows all changes saved in stash.)
+
+## Git Clean ##
+
+1. git clean -df (# d for get rid of untracked directories & f for files.)
