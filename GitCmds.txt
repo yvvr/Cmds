@@ -42,6 +42,8 @@
 5. git pull
 6. git pull origin <branch>
 7. git push
+8. git push -u origin <branch> (# pushes changes to particular branch.)
+9. git remote set-url origin git@github.com:User/UserRepo.git (# It resets origin to new URL)
 
 ## Clone from branch ##
 
@@ -50,10 +52,13 @@
 ## Branches ##
 
 1. git branch -a (# List all branches)
+2. git branch <name_of_branch> (# Creates a new branch)
 
 ## Checkout the branch that you want
 
-git checkout <name_of_branch>
+1. git checkout <name_of_branch>
+2. git checkout -f <branch-name>
+3. git checkout -b <branch-name> --force
 
 or 
 
@@ -66,6 +71,11 @@ cd $BRANCH
 git init
 git remote add -t $BRANCH -f origin $REMOTE_REPO
 git checkout $BRANCH
+
+## Delete Branch ##
+
+1. git branch -d <name_of_branch> (# Deletes branch only if changes are merged.)
+2. git branch -D <name_of_branch> (# Deletes branch even if there are unmerged changes.)
 
 ## Git log ##
 
@@ -109,3 +119,13 @@ git config --global --get user.name
 ## Git Ignore ##
 
 .gitignore (#list files & Folders to ignore)
+
+## Git Save Temporary data ##
+
+git stash save
+git checkout branch
+
+// do something
+
+git checkout oldbranch
+git stash pop
