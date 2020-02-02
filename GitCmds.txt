@@ -1,0 +1,80 @@
+## Git commands ##
+
+1. git init
+2. git config --list
+3. git config --global user.name <username>
+4. git config --global user.email <user's email>
+5. git status
+6. git add .
+7. git add <filename>
+8. git commit -m <message>
+9. git diff <filename>
+10. git checkout -- <filename>
+11. git reset Head <filename>
+12. git restore --staged <filename>
+13. git restore <filename>
+14. git remote add $<variable> <git repo link>
+15. git remote
+16. git push -u $<remote variable> <branch name>
+17. git clone -b <branch> <remote_repo>
+18. git pull
+19. git pull origin <branch>
+20. git push
+
+#### Clone from branch ####
+
+1. git clone <repository_url> (# Clone the repository)
+
+#### Branches ####
+
+1. git branch -a (# List all branches)
+
+## Checkout the branch that you want
+
+git checkout <name_of_branch>
+
+or 
+
+17. git clone -b <branch> <remote_repo>
+
+or 
+
+mkdir $BRANCH
+cd $BRANCH
+git init
+git remote add -t $BRANCH -f origin $REMOTE_REPO
+git checkout $BRANCH
+
+
+#### Locally & Globally set and get commands ####
+
+You need to use the local set command below:
+
+##local set
+
+git config user.email mahmoud@company.ccc
+git config user.name 'Mahmoud Zalt'
+
+##local get
+
+git config --get user.email
+git config --get user.name
+
+The local config file is in the project directory: .git/config.
+
+## global set
+
+git config --global user.email mahmoud@zalt.me
+git config --global user.name 'Mahmoud Zalt'
+
+## global get
+
+git config --global --get user.email
+git config --global --get user.name
+
+
+#### delete any credentials from git bash ####
+
+1. git credential-manager delete <url>
+
+2. git credential-manager delete https://github.com
