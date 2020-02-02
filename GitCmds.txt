@@ -1,4 +1,6 @@
-## Git commands ##
+###### Git commands ######
+
+## Git Modification ##
 
 1. git init
 2. git config --list
@@ -6,26 +8,46 @@
 4. git config --global user.email <user's email>
 5. git status
 6. git add .
-7. git add <filename>
-8. git commit -m <message>
-9. git diff <filename>
-10. git checkout -- <filename>
-11. git reset Head <filename>
-12. git restore --staged <filename>
-13. git restore <filename>
-14. git remote add $<variable> <git repo link>
-15. git remote
-16. git push -u $<remote variable> <branch name>
-17. git clone -b <branch> <remote_repo>
-18. git pull
-19. git pull origin <branch>
-20. git push
+7. git add <filename> (# git add = git commit -a)
 
-#### Clone from branch ####
+8. git commit -m <message>
+9. git commit -am <message> (# commiting directly from working directory without adding files)
+
+10. git diff <filename>
+11. git diff --staged <filename> (# To do diff in staging area of repository)
+
+## Git Reverting Files ##
+
+1. git checkout -- <filename> (# To discard changes in Working directory)
+2. git reset Head <filename> (# To unstage the file (Staging area -> Working directory))
+
+3. git checkout <Hash Log> -- <FileName> (# To discard changes in particular file from Last Commit(Local Repository -> Staging area)) 
+4. git restore --staged <filename>
+5. git restore <filename> (# To discard changes in working directory)
+
+6. git rm <filename> (# removes file from Working Directory)
+
+## Git Rename Files ##
+
+1. git add <new file name> , git rm <old file name> (# two steps to rename file.)
+2. git mv <old file name> <new file name> (# Moving from one file to another itself is renaming.)
+
+## Git Remote Setup ##
+
+1. git remote add $<variable> <git repo link> (# variable name can be anything, but convenient term is "origin")
+2. git remote
+3. git remote -v (# gives remote repository details)
+3. git push -u $<remote variable> <branch name>
+4. git clone -b <branch> <remote_repo>
+5. git pull
+6. git pull origin <branch>
+7. git push
+
+## Clone from branch ##
 
 1. git clone <repository_url> (# Clone the repository)
 
-#### Branches ####
+## Branches ##
 
 1. git branch -a (# List all branches)
 
@@ -45,8 +67,13 @@ git init
 git remote add -t $BRANCH -f origin $REMOTE_REPO
 git checkout $BRANCH
 
+## Git log ##
 
-#### Locally & Globally set and get commands ####
+1. git log
+2. git log --author="<your name>"
+
+
+## Locally & Globally set and get commands ##
 
 You need to use the local set command below:
 
@@ -73,8 +100,12 @@ git config --global --get user.email
 git config --global --get user.name
 
 
-#### delete any credentials from git bash ####
+## delete any credentials from git bash ##
 
 1. git credential-manager delete <url>
 
 2. git credential-manager delete https://github.com
+
+## Git Ignore ##
+
+.gitignore (#list files & Folders to ignore)
