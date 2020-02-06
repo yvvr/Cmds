@@ -26,6 +26,7 @@
 4. git restore <filename> (# To discard changes in working directory)
 
 5. git rm <filename> (# removes file from Working Directory)
+5.1. git rm --cached <filename> (# removes file from Staging area.)
 
 6. git revert <Hash Log> (# To revert given commit, its creates new commit rather than reset.)
 7. git revert HEAD (# To revert last commit, its creates new commit rather than reset.)
@@ -34,6 +35,7 @@
 9. git reset --soft <commit_hash> (# To discard the commit (Local Repository -> Staging area))
 10. git reset <commit_hash> (# To discard changes of the commit (Local Repository -> Working directory))
 11. git reset --hard <commit_hash> (# To discard changes of the commit for ever (Local Repository -> Initial state.))
+12. git reset --hard <commit hash> <filename> (# To discard changes of particular file in commit for ever (Local Repository -> Initial state.))
 
 ## Git Rename Files ##
 
