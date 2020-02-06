@@ -1,0 +1,19 @@
+##### Linux Commands #####
+
+## Remove file or Directory ##
+
+1. rm -rf /my/locked/directory (-r/ remove recursively -f/force remove)
+
+2. rm -r dirname1 dirname2 dirname3 (remove multiple directories) 
+
+3. rm -d dirname (remove empty file)
+
+4. rm filename1 filename2 filename3 (to remove multiple files)
+
+5. rm *.pdf (remove with wildcard)
+
+6. rm -i filename(s) (remove files with confirmation prompting)
+
+## Copying files or Directories ##
+
+1. cp -r source destination (copying files recursively)
