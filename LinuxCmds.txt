@@ -17,3 +17,27 @@
 ## Copying files or Directories ##
 
 1. cp -r source destination (copying files recursively)
+
+## Finding a folder ##
+
+1. find /home/vivek/ -type d -name "Documents"
+
+2. find /home/vivek/ -type d -iname "Documents" (case incentive)
+
+3. sudo find / -type d -iname "etc" 2>/dev/null (hide permission denied error messages)
+
+4. find / -type d -name "python.projects" -ls
+
+5. locate -b '\dir1' (using locate cmd)
+
+## DMESG with adb shell ##
+
+1. adb shell su -c dmesg | grep 'avc: '
+
+## Finding a process(ssh-agent) running at background ##
+
+1. ps -ef | grep ssh-agent
+
+## Search for a string ##
+
+1. grep -r -i --include \*.h --include \*.cpp
