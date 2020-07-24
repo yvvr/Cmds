@@ -1,0 +1,52 @@
+### C/C++ directives
+
+## Macros
+
+1. #define LIMIT 5 
+2. #define AREA(l, b) (l * b)
+
+## File Inclusion
+
+1. #include <file_name> (The ‘<‘ and ‘>’ brackets tells the compiler to look for the file in standard directory.)
+2. #include"filename"  (These types of files are user defined files)
+
+## Conditional Compilation
+
+1.  #ifdef macro_name ((#ifdef and #endif will be executed only if the macro or the identifier with #ifdef is defined.))
+       statement1;
+       statement2;
+       statement3;
+       .
+       .
+       .
+       statementN;
+   #endif
+   
+2. #undef LIMIT
+
+3.  ifndef macro_name  (#ifndef and #endif will be executed only if the macro or the identifier with #ifndef is not defined.)
+        statement1;
+        statement2;
+        statement3;
+        .
+        .
+        .
+        statementN;
+    endif
+	
+4.  #if macro_condition
+       statements
+    #elif macro_condition
+       statements
+    #else
+       statements
+    #endif
+	
+5.  #error optional_error (This directive aborts the compilation process)
+
+6. cout << "Value of __LINE__ : " << __LINE__ << endl;
+   cout << "Value of __FILE__ : " << __FILE__ << endl;
+   cout << "Value of __DATE__ : " << __DATE__ << endl;
+   cout << "Value of __TIME__ : " << __TIME__ << endl;
+
+
