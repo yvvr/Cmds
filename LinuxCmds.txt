@@ -41,3 +41,7 @@
 ## Search for a string ##
 
 1. grep -r -i --include \*.h --include \*.cpp
+
+## Reboot ##
+
+1. sudo reboot
