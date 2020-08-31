@@ -153,6 +153,27 @@ git config --global --get user.name
 2. git stash list (# lists all changes saved in stash.)
 3. git stash show (# shows all changes saved in stash.)
 
+
 ## Git Clean ##
 
 1. git clean -df (# d for get rid of untracked directories & f for files.)
+
+## Git ignore tracked changes ##
+
+1. git update-index --assume-unchanged <file> (#Git ignore tracked file changes, as .gitignore don't work in this case.)
+
+2. git update-index --no-assume-unchanged <file> (#Git unignore already ignored changes.)
+
+3. git update-index --skip-worktree <file>
+
+4. git update-index --no-skip-worktree <file>
+
+## other solution for ignore tracked files
+
+git stash
+
+git whatever-else
+
+git stash apply
+
+git stash clear
