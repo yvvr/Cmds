@@ -177,3 +177,19 @@ git whatever-else
 git stash apply
 
 git stash clear
+
+https://stackoverflow.com/questions/278192/view-the-change-history-of-a-file-using-git-versioning
+
+## Advance cmds
+
+1. git commit --amend -m "<message>" (Modifies message of recent commit.)
+
+2. git reflog (shows commits in order of reference.)
+
+## git patch
+
+1. git format-patch <applied_brach> -o <folder_name> (create patch for applied branch with new folder name.) # It creates multiple patches for each commit.
+
+2. git format-patch -1 <commit_hash> -o <folder_name> (create patch only for particular commit.)
+
+3. git am <folder_name/*.patch> (Apply patch in applied brach.)
